@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Bilibili Player</title>
 <datalist id="videolist">
     <option value="BV1ZW41187pu">等待戈多</option>
     <!-- Add more video options here as needed -->
@@ -38,7 +39,9 @@
 </head>
 <body>
 <p class='video'>
-    <iframe id="video" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1ZW41187pu&p=1&autoplay=0" scrolling="no" border="0" loading="lazy" allowfullscreen="true" class="w-full h-full rounded">
+    <iframe id="video"
+			src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1ZW41187pu&p=1&autoplay=0"
+			scrolling="no" border="0" loading="lazy" allowfullscreen="true" class="w-full h-full rounded">
     </iframe>
 </p>
 <p>bv:<input id="bv" style="width:125px;" list="videolist">
@@ -47,3 +50,5 @@
 	<button type="button" onclick="increase()">&gt;</button>
 </p>
 	<button type="button" onclick="submit()">确定</button>
+</body>
+</html>
