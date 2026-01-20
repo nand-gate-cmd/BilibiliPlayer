@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<datalist id="videolist">
+    <option value="BV1ZW41187pu">等待戈多</option>
+    <!-- Add more video options here as needed -->
+</datalist>
+<script>
+    function increase(){
+        document.getElementById("p").value++;
+    }
+    function decrease(){
+        document.getElementById("p").value--;
+    }
+    function submit(){
+        bv=document.getElementById("bv").value;
+        p=document.getElementById("p").value;
+        var result=`https://player.bilibili.com/player.html?isOutside=true&bvid=${bv}&p=${p}&autoplay=0`
+        document.getElementById("video").src=result
+    }
+</script>
+<style>
+    .video {
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        box-shadow: 0 0 8px #e5e9ef;
+    }
+    .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+<p class='video'>
+    <iframe id="video" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1ZW41187pu&p=1&autoplay=0" scrolling="no" border="0" loading="lazy" allowfullscreen="true" class="w-full h-full rounded">
+    </iframe>
+</p>
+<p>bv:<input id="bv" style="width:125px;" list="videolist">
+	&nbsp;&nbsp;p:<input id="p" value=1 style="width:30px;">
+	<button type="button" onclick="decrease()">&lt;</button>
+	<button type="button" onclick="increase()">&gt;</button>
+</p>
+	<button type="button" onclick="submit()">确定</button>
